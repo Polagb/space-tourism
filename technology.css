@@ -1,0 +1,478 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(assets/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  margin: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  height: 40px;
+  width: 40px;
+}
+
+.line {
+  display: none;
+}
+
+.hamburger-container {
+  width: 24px;
+  height: 21px;
+}
+
+.option {
+  display: none;
+}
+
+.hamburger-panel {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 254px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  box-sizing: border-box;
+  backdrop-filter: blur(50px);
+  display: none;
+}
+
+.close-btn {
+  height: 85px;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+
+.close-btn img {
+  margin-left: 174px;
+}
+
+.panel-options {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.panel-option {
+  display: flex;
+  color: #ffffff;
+  font-family: Barlow Condensed, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.panel-option:hover {
+  border-right: 3px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.panel-option-checked,
+.panel-option-checked:hover {
+  border-right: 3px solid white;
+}
+
+.panel-option-checked:hover {
+  cursor: pointer;
+}
+
+.nums {
+  font-weight: bold;
+  letter-spacing: 2.7px;
+  margin-right: 12px;
+}
+
+.body {
+  padding: 24px 24px 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: Barlow Condensed, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.4px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title span {
+  margin-right: 24px;
+  font-weight: bold;
+  opacity: 0.25;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.content-image {
+  display: flex;
+  height: 258px;
+  width: 100%;
+  margin-top: 64px;
+  position: relative;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: -24px;
+  right: -24px;
+  bottom: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.landscape {
+  display: none;
+}
+
+.content-text {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.digits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.digit {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Bellefair, sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.digit:hover {
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.digit-checked,
+.digit-checked:hover {
+  background-color: #FFFFFF;
+  color: #0B0D17;
+}
+
+.digit-checked:hover {
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.terminology {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: Bellefair, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.heading {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.term {
+  font-size: 24px;
+}
+
+.definition {
+  display: flex;
+  font-family: Barlow, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  color: #D0D6F9;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: url(assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    height: 96px;
+  }
+
+  .logo-container {
+    width: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .hamburger-container {
+    padding: 0 40px;
+    flex: 1;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 48px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(50px);
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .option {
+    display: flex;
+    color: #ffffff;
+    font-family: Barlow Condensed, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nums {
+    font-weight: bold;
+    letter-spacing: 2.7px;
+    margin-right: 12px;
+  }
+
+  .option:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .option-checked,
+  .option-checked:hover {
+    border-bottom: 3px solid white;
+  }
+
+.option-checked:hover {
+  cursor: pointer;
+}
+
+  .body {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    align-self: flex-start;
+  }
+  .content-image {
+    height: 357px;
+  }
+  .image-container {
+    left: -40px;
+    right: -40px;
+  }
+  .image-container img {
+    object-position: center;
+  }
+  /* .portrait {
+    display: none;
+  }
+  .landscape {
+    display: block;
+  } */
+  .digit, .heading {
+    font-size: 24px;
+  }
+  .digit {
+    width: 56px;
+    height: 56px;
+  }
+  .info {
+    
+  }
+  .term {
+    font-size: 40px;
+  }
+  .definition {
+    font-size: 16px;
+    line-height: 28.8px;
+
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: url(assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .header {
+    margin-top: 40px;
+  }
+
+  .logo-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 64px;
+    padding-left: 64px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .line {
+    display: block;
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-right: -32px;
+  }
+
+  .hamburger-container {
+    padding: 0 64px;
+    width: 736px;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  .title {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .body {
+    margin: 48px auto;
+    padding: 0;
+  }
+  .title {
+    width: 1302px;
+    margin: 0 auto;
+  }
+  .content {
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .content-text {
+    width: 635px;
+    flex-direction: row;
+    box-sizing: border-box;
+    gap: 64px;
+  }
+  .digits {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .digit {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+  .info {
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .terminology {
+    align-items: flex-start;
+    margin: 0;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .term {
+    font-size: 56px;
+  }
+  .definition {
+    font-size: 18px;
+    line-height: 32.4px;
+    text-align: left;
+  }
+  .content-image {
+    width: 50%;
+    height: 600px;
+    margin: 67px 0;
+  }
+  .image-container {
+    left: 0;
+    right: 0;
+  }
+  .image-container img {
+    object-position: top;
+  }
+}
