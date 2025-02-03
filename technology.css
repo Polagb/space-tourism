@@ -8,6 +8,7 @@ body {
   background-position: top;
   background-size: cover;
   margin: 0;
+  height: 100vh;
 }
 
 p {
@@ -356,9 +357,6 @@ p {
   .digit {
     width: 56px;
     height: 56px;
-  }
-  .info {
-    
   }
   .term {
     font-size: 40px;

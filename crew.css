@@ -8,6 +8,7 @@ body {
   background-position: top;
   background-size: cover;
   margin: 0;
+  height: 100vh;
 }
 
 p {
