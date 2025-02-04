@@ -224,12 +224,15 @@ p {
 
 .image-container {
   margin: 5px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 .content-image img {
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
   margin-left: 28px;
 }
