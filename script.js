@@ -61,9 +61,9 @@ function provideData(planetName) {
 }
 
 
-document.querySelector(".content").addEventListener("click", function(event) {
+document.querySelector(".content").addEventListener("click", function (event) {
   if (event.target && event.target.classList.contains("planet-option")) {
-    const planetName = event.target.textContent;  
+    const planetName = event.target.textContent;
     provideData(planetName);
     document.querySelectorAll(".planet-option")
       .forEach(option => {
@@ -115,6 +115,8 @@ function updateTech(digit) {
         if ((index + 1).toString() === digit) {
           document.querySelector(".portrait").src = tech.images.portrait;
           document.querySelector(".portrait").alt = tech.name;
+          document.querySelector(".landscape").src = tech.images.landscape;
+          document.querySelector(".landscape").alt = tech.name;
           document.querySelector(".term").textContent = tech.name;
           document.querySelector(".definition").textContent = tech.description;
         }
@@ -167,28 +169,37 @@ function carousel(num) {
           document.querySelector(".bio").textContent = crewmate.bio;
           document.querySelector(".image-container img").src = crewmate.images.png
           document.querySelector(".image-container img").alt = crewmate.name;
-
-          document.querySelectorAll(".dot").forEach((dot, index) => {
-            dot.classList.remove("dot-active");
-            if (index === num) {
-              dot.classList.add("dot-active");
-            }
-          })
         }
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+          dot.classList.remove("dot-active");
+          if (num === index) {
+            dot.classList.add("dot-active");
+          }
+        })
       })
     })
     .catch(error => console.log('Error fetching data:', error));
 };
 
 let currentValue = 0;
+let timeoutId;
 
 function rotateValues() {
-  console.log(currentValue); 
-  currentValue = (currentValue + 1) % 4; 
+  currentValue = (currentValue + 1) % 4;
+  console.log(currentValue);
   carousel(currentValue);
 
-
-  setTimeout(rotateValues, 5000); 
+  timeoutId  = setTimeout(rotateValues, 5000);
 }
 
+document.querySelectorAll(".dot").forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    clearTimeout(timeoutId);
+    currentValue = index;
+    timeoutId  = setTimeout(rotateValues, 5000);
+  })
+})
+
+
 rotateValues();
+console.log(currentValue);

@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 .header {
@@ -72,11 +72,6 @@ body {
   text-wrap: nowrap;
   text-transform: uppercase;
   height: 100%;
-}
-
-.panel-option:hover {
-  border-right: 3px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
 }
 
 .panel-option-checked,
@@ -147,12 +142,6 @@ p {
   margin: 119px auto;
   transition: all 0.1s linear;
 }
-.explore-container:hover {
-  color: #0B0D1780;
-  border: 88px solid rgba(255, 255, 255, 0.1); 
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 @media screen and (min-width: 768px) {
   html {
@@ -162,6 +151,7 @@ p {
     background: url(assets/home/background-home-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
   }
   .header {
     display: flex;
@@ -247,6 +237,12 @@ p {
   .explore-container {
     margin: 0 auto;
   }
+  .explore-container:hover {
+    color: #0B0D1780;
+    border: 88px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 50%;
+    cursor: pointer;
+  }
   .explore {
     height: 272px;
     width: 272px;
@@ -262,6 +258,7 @@ p {
     background: url(assets/home/background-home-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
   }
   .header {
     margin-top: 40px;

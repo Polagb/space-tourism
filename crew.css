@@ -8,7 +8,7 @@ body {
   background-position: top;
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 p {
@@ -82,11 +82,6 @@ p {
   text-wrap: nowrap;
   text-transform: uppercase;
   height: 100%;
-}
-
-.panel-option:hover {
-  border-right: 3px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
 }
 
 .panel-option-checked,
@@ -208,6 +203,7 @@ p {
   background-color: #FFFFFF;
   opacity: 1;
 }
+
 .dot-active:hover {
   cursor: pointer;
 }
@@ -223,7 +219,8 @@ p {
 }
 
 .image-container {
-  margin: 5px 28px;
+  height: 350px;
+  width: 327px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,9 +228,10 @@ p {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
-.content-image img {
-  object-fit: fill;
-  width: 100%;
+.image-container img {
+  object-fit: contain;
+  width: 271.24px;
+  height: 340px;
   margin-left: 28px;
 }
 
@@ -247,6 +245,7 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    height: 100%;
   }
 
   .header {
@@ -351,6 +350,18 @@ p {
   .image-container {
     margin: 0 120px;
   }
+
+  .image-container {
+    width: 446.74px;
+    height: 560px;
+    align-items: flex-start;
+  }
+
+  .image-container img {
+    object-fit: contain;
+    width: 415.3px;
+    height: 598.96px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -363,6 +374,7 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    height: 100%;
   }
 
   .header {
@@ -460,19 +472,25 @@ p {
 
   .content-image {
     flex: 1;
-    height: 676px;
+    height: 734px;
+    padding: 29px 0;
+    box-sizing: border-box;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .image-container {
-    margin: 0;
+    margin: 0 0 0 33px;
     display: flex;
     width: 100%;
     height: 100%;
   }
 
-  .content-image img {
-    margin: 29px 0 29px 28px;
-    object-fit: contain;
+  .image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
   }
 
 }

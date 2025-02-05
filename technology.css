@@ -8,7 +8,7 @@ body {
   background-position: top;
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 p {
@@ -83,12 +83,6 @@ p {
   text-transform: uppercase;
   height: 100%;
 }
-
-.panel-option:hover {
-  border-right: 3px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-}
-
 .panel-option-checked,
 .panel-option-checked:hover {
   border-right: 3px solid white;
@@ -156,7 +150,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
 }
 
 .landscape {
@@ -254,6 +247,7 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    height: 100%;
   }
 
   .header {
@@ -345,12 +339,12 @@ p {
   .image-container img {
     object-position: center;
   }
-  /* .portrait {
-    display: none;
-  }
   .landscape {
     display: block;
-  } */
+  }
+  .portrait {
+    display: none;
+  }
   .digit, .heading {
     font-size: 24px;
   }
@@ -378,6 +372,7 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    height: 100%;
   }
 
   .header {
@@ -472,5 +467,11 @@ p {
   }
   .image-container img {
     object-position: top;
+  }
+  .portrait {
+    display: block;
+  }
+  .landscape {
+    display: none;
   }
 }
